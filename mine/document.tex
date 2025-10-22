@@ -1,0 +1,148 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[slovak]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{listings}
+\usepackage{minted} % balík na farebné zvýraznenie kódu
+% dostupné štýly: friendly, colorful, monokai, borland, autumn, vs, tango, ...
+\usemintedstyle{emacs}
+\usepackage[dvipsnames]{xcolor} % example xcolor package option, see the documentation
+
+
+\title{Prehľad HTML a CSS}
+\author{IV.ročník}
+\date{}
+
+\begin{document}
+	\maketitle
+	
+	\section{Jazyk HTML}
+	\begin{itemize}
+		\item hypertextový značkovací jazyk
+		\item základným prvkom je \textbf{tag}
+		\begin{itemize}
+			\color{OliveGreen}
+			\item párové tagy
+			\item nepárové tagy
+			\item nepovinne párové
+		\end{itemize}
+	\end{itemize}
+	
+	\textcolor{white}{teolaxt} \\ 
+	\textbf{Tag} - základná značka, ktorí symbolizuje pre prehliadač potrebný prvok \\
+	\textbf{Atribút} - pomenovanie vlastnosti HTML tagu \\
+	\textbf{Hodnota} - konkrétna hodnota priradená atribútu a tagu 
+	
+	\mint{html}|<tag atribút="hodnota"> Obsah, na ktorý sa aplikujú nastavenia </tag>|
+
+	\section{CSS}
+	\begin{itemize}
+		\item priraďujú HTML tagom rôzne vlastnosti
+		\item definície zapísané 
+		\begin{itemize}
+			\item zapísaná v HTML dokumente
+			\item priradená konkrétnemu atribútu
+			\item pripojené externe ako CSS súbor
+		\end{itemize}
+	\end{itemize}
+	
+	\newpage
+	\section*{Základná štruktúra}
+	\begin{figure}[h]
+		\begin{minted}[autogobble]{html}
+			<!DOCTYPE html>
+			<html lang="en">
+			<head>
+			  <meta charset="UTF-8">
+			  <meta name="viewport" content="width=device-width,
+			  initial-scale=1.0">
+			  <title>Document</title>
+			</head>
+			<body>
+			
+			</body>
+			</html>
+		\end{minted}
+	\end{figure}
+
+	\section*{Zápis CSS}
+	\begin{figure}[h]
+		\begin{minted}[autogobble]{css}
+			tag{css-vlastnost: hodnota1;
+			    css-vlastnost: hodnota2;
+			    }
+		\end{minted}
+	\end{figure}
+	
+	\begin{enumerate}
+		\item v hlavičke html dokumentu \mint{css}|<style></style>|
+		\item priamo pre daný tag ako atribút\mint{css}|<h1 style="color: blue;">|
+		\item externý .css súbor \mint{css}|<link rel="stylesheet" href="./style.css"/>|
+	\end{enumerate}
+	
+	\section{Meta tagy}
+	Definujú metadáta o HTML dokumente, nachádzajú vo vnútri elementu <head> a na stránke sa nezobrazia, ale sú strojovo analyzovateľné. Metadáta používajú prehliadače (ako zobraziť obsah alebo znova načítať stránku), vyhľadávače (kľúčové slová) a ďalšie webové služby. 
+	
+	\begin{enumerate}
+		\item \textbf{Description}
+		\begin{itemize}
+			\item obsahuje popis stránky
+			\item \mint{html}|<meta name="description" content="HTML a CSS">|
+		\end{itemize}
+		\item \textbf{Keywords}
+		\begin{itemize}
+			\item obsahuje kľúčové slová, dnes nemajú význam, Google ich ignoruje
+			\item \mint{html}|<meta name="keywords" content="HTML, CSS, JavaScript">|
+		\end{itemize}
+		\item \textbf{Jazyk}
+		\begin{itemize}
+			\item pomáha pri vyhľadávaní v danom jazyku
+			\item \mint{html}|<meta http-equiv="Content-language" content="sk">|
+		\end{itemize}
+		\item \textbf{Kódovanie}
+		\begin{itemize}
+			\item zabezpečuje správne zobrazovanie znakov s diakritikou
+			\item \mint{html}|<meta charset="UTF-8">|
+		\end{itemize}
+		\item \textbf{Autor}
+		\begin{itemize}
+			\item kto stránku vytvoril
+			\item \mint{html}|<meta name="autor" content="Michal Hricko">|
+		\end{itemize}
+	\end{enumerate}
+	
+	\newpage
+	\section{Triedy a identifikátory}
+	
+	\subsection*{Triedy}
+	Atribút class sa často používa na odkazovanie na názov triedy v štýle, teda uľahčujú dizajnovanie. Môže ho tiež použiť JavaScript na prístup a manipuláciu s \textbf{prvkami} s daným názvom triedy.
+	
+	\subsubsection*{\textbf{Zápis html}}
+	\mint{html}|<p class="note">Ola amigos</p>|
+	
+	\subsubsection*{\textbf{Zápis css}}
+	\mint{css}|.note{font-size: 20px;}|
+	
+	\subsection*{Identifikátory}
+	
+	Majú podobné využitie ako triedy, ale v HTML dokumente \textbf{sa nesmú opakovať!}
+	
+	\subsubsection*{\textbf{Zápis html}}
+	\mint{html}|<p id="header"> </p>|
+	
+	\subsubsection*{\textbf{Zápis css}}
+	\mint{css}|#header{font-size: 20px;}|
+	
+	\subsection*{Pseudotriedy}
+	
+	Umožňujú zadávanie vlastností pre \textbf{určitý tag} v špecifických prípadoch (definuje štýl pre špeciálny stav prvku). \\
+	
+	\noindent\textbf{:hover} - Vyberie prvok po prejdení myšou(podčiarkne, zmení farbu), \\
+	\textbf{:link} - nenavštívený odkaz, \\
+	\textbf{:visited} - už navštívený odkaz, \\
+	\textbf{:fullscreen} - zobrazenie na celú obrazovku.
+	
+	
+	
+	
+\end{document}

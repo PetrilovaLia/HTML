@@ -1,0 +1,39 @@
+
+
+/* Nastavime pismo (napr. Trebuchet MS), 
+pridame margin, sirku 50 % 
+zarovname ju na stred (margin: 0 auto;).
+Pozadie sekcie nastavime na biele
+pridame tien (box-shadow: 0 0 8px 30px rgba(0,0,0,0.5);), 
+vnutorne odsadenie (padding: 50px;) a mierne zaoblene rohy*/
+section#colour-display {
+    font-family: 'Poppins';
+    margin: 200px auto;
+    width: 30%;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0,0,0, 0.5);
+    padding: 50px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+section#colour-display h1{
+    font-weight: 900;
+}
+/*bude mat 100 % sirku, cierne pozadie, biely text, 
+tucne pismo, padding, ziadny ramik (border: none) 
+a vacsiu velkost pisma.*/
+section#colour-display #new-colour-button{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-weight: 900;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+}
+
+/*Koniec pridanie prechodu, aby bola zmena plynula*/
+body {
+    transition: background-color 0.5s;
+}

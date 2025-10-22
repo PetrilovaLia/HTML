@@ -1,0 +1,81 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[slovak]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstset{
+	basicstyle=\ttfamily\small,
+	keywordstyle=\color{blue},
+	commentstyle=\color{gray},
+	stringstyle=\color{teal},
+	showstringspaces=false,
+	frame=single,
+	breaklines=true
+}
+
+\title{Ako internet v skutočnosti funguje?}
+\author{III.ročník}
+\date{}
+
+\begin{document}
+	\maketitle
+	
+	
+	
+	\section{Úvod do internetu}
+	V tejto lekcii sa podrobne ponoríme do toho, ako internet presne funguje. \\
+	
+	\textbf{Čo je internet?}
+	
+	Mnoho ľudí si myslí, že internet je cloud, niečo, čo sa vznáša na oblohe, a že je super zložitý a ťažko pochopiteľný. To však vôbec nie je pravda. Internet je v skutočnosti dosť jednoduchý. \\
+	
+	Internet je v podstate len dlhý kus drôtu, ktorý spája rôzne počítače navzájom. Napríklad jeden počítač môže byť v Londýne a druhý v Seattli a môžu komunikovať a prenášať dáta prostredníctvom tohto obrovského drôtu. \\
+	
+	\textbf{Servery a klienti }
+	Niektoré počítače pripojené k internetu majú veľmi špeciálnu úlohu: musia byť online 24 hodín denne, 7 dní v týždni, pripravené poskytnúť vám všetky údaje a súbory, ktoré požadujete pri pokuse o prístup na webovú stránku. Tieto sa nazývajú servery.
+	
+	Servery vám poskytujú všetky údaje a súbory potrebné na prístup a interakciu s určitými webovými stránkami. Akýkoľvek počítač, ktorý používateľ používa na prístup na internet, sa nazýva klient.
+	
+	Webový server si môžete predstaviť ako obrovskú knižnicu, ktorá je otvorená 24 hodín denne, 7 dní v týždni. Môžete tam ísť kedykoľvek počas dňa a požiadať o zobrazenie domovskej stránky Google alebo najnovších príspevkov na TechCrunch a server vám poskytne všetky súbory a údaje, ktoré potrebujete na zobrazenie tejto webovej stránky.
+	Rýchle vyhľadávanie webových stránok
+	
+	Ak existuje knižnica dostatočne veľká na to, aby sa do nej zmestili všetky tieto webové stránky, bolo by ťažké rýchlo nájsť to, čo chcete. Ako sa tento problém rieši na internete?
+	
+	Keď do prehliadača zadáte google.com, váš prehliadač odošle túto správu vášmu poskytovateľovi internetových služieb (ISP). Poskytovatelia internetových služieb sú spoločnosti, ktorým platíte za prístup na internet, ako napríklad ATandT alebo Comcast v USA alebo BT alebo TalkTalk vo Veľkej Británii.
+	
+	Poskytovateľ internetových služieb potom odošle vašu požiadavku na server DNS (Domain Name System), čo je v podstate sofistikovaný telefónny zoznam. Server DNS vyhľadá presnú IP adresu webovej stránky, ku ktorej sa pokúšate získať prístup.
+	
+	Každý počítač pripojený na internet má IP adresu, ktorá je ako poštové smerovacie číslo vášho počítača. Toto umožňuje lokalizovať počítače a kontaktovať ich pomocou ich jedinečných IP adries.
+	
+	Keď DNS server nájde IP adresu, odošle ju späť do vášho prehliadača prostredníctvom poskytovateľa internetových služieb a cez internet. Váš prehliadač potom môže priamo odoslať požiadavku na túto IP adresu, ktorá zodpovedá napríklad serverom Google, a prijať všetky súbory a údaje potrebné na zobrazenie domovskej stránky Google.
+	
+	
+	\textbf{Vyskúšajte si to sami}
+	IP adresu domovskej stránky Google si môžete vyhľadať na stránke nslookup.io a zadaním google.com. Zobrazí sa vám presná IP adresa serverov Google. Ak túto IP adresu skopírujete a vložíte do novej karty prehliadača, zobrazí sa vám domovská stránka Google.
+	Zhrnutie fyzickej štruktúry internetu
+	
+	Internet je rozsiahla sieť káblov spájajúcich rôzne počítače na celom svete. Ale čo oceány?
+	
+	Existujú masívne podmorské káble spájajúce všetky kontinenty na Zemi. Môžete navštíviť submaricablemap.com, kde si môžete pozrieť tieto káble a nájsť tie, ktoré vás pripájajú k internetu.
+	
+	Tieto podmorské káble sú obrovské a pozostávajú zo stoviek optických vlákien. Každé vlákno využíva lasery na prenos až 400 gigabajtov dát za sekundu.
+	
+	Tu je prierez jedného z káblov, ktoré vedú na Nový Zéland. Je to absolútny zázrak modernej technológie a vyzerá naozaj nádherne.
+	
+	Vždy, keď načítame webovú stránku alebo klikneme na tlačidlo na webovej stránke, signály putujú cez tieto podvodné a nadvodné drôty. Všetko, čo potrebujete, je IP adresa.
+	
+	Drobné elektrické signály sa šíria rýchlosťou svetla cez oceány a pol sveta. Za pár milisekúnd si môžete zobraziť svoje obľúbené webové stránky. Taký úžasný je internet.
+	
+	
+	\textbf{Kľúčové poznatky} 
+	\begin{itemize}
+		\item Internet je v podstate rozsiahla sieť káblov spájajúcich počítače na celom svete, 
+		\item Servery sú špecializované počítače, ktoré poskytujú klientom údaje a súbory na požiadanie, 
+		\item DNS servery prekladajú ľudsky čitateľné doménové mená na IP adresy, čo umožňuje komunikáciu,
+		\item Masívne podmorské optické káble spájajú kontinenty a prenášajú dáta neuveriteľnou rýchlosťou.
+	\end{itemize} 
+	
+	
+\end{document}
