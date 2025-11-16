@@ -1,0 +1,90 @@
+#custom-btn {
+  display: inline-block;
+  padding: 0.4em 1em;
+  font-size: 1rem;
+  font-family: sans-serif;
+  color: buttontext;
+  background-color: buttonface;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+}
+
+#custom-btn:focus {
+  outline: 2px solid Highlight;
+  outline-offset: 2px;
+}
+
+#custom-btn:active {
+  background-color: #ddd;
+}
+
+.alert {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  padding: 1em;
+  margin-top: 1em;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.alert span {
+  display: inline-block;
+}
+
+.math-expression {
+  font-family: "Times New Roman", serif;
+  font-size: 1.2rem;
+  background-color: #f4f4f4;
+  border-left: 4px solid #007acc;
+  padding: 0.75em 1em;
+  margin-top: 1em;
+  display: inline-block;
+}
+
+.math-expression sup {
+  font-size: 0.8em;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.searchbox {
+  flex: 1;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  min-height: 1.5em;
+}
+
+.searchbox:focus {
+  border-color: #007acc;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 122, 204, 0.3);
+}
+
+button {
+  padding: 0.5em 1em;
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* Hide visually but keep for screen readers */
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}

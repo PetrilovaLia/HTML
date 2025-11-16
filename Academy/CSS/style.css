@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff9800;
+}
+
+
+.header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.box {
+  flex: 1;
+  min-width: 200px;
+  background-color: #ddd;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.boxik {
+      width: 50px;
+      min-width: 100px;
+      height: 50px;
+      min-height: 100px;
+      background-color: lightcoral;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+.box:hover {
+  background-color: #ccc;
+}
+
+figure img {
+  border: 4px solid rgb(149, 192, 162);
+}
+img + figcaption {
+  border: 4px solid black;
+}
+
+div  p {
+    color: #4CAF50;
+}
+
+div ~ p {
+    color: #5538d7;
+}
+div + p {
+    color: #af664c;
+}
+/* div > p {
+    color: #ec4103;
+} */
+
+.inline-block-element {
+  display: inline-block;
+  width: 170px;
+  height: 100px;
+}
+
+.element1 {
+  background-color: lightblue;
+}
+
+.element2 {
+  background-color: lightgreen;
+}
+
+
+/* Responsive: for tablets and below (≤ 768px) */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+    font-size: 1.1rem;
+  }
+}
+
+/* Responsive: for phones (≤ 480px) */
+@media (max-width: 480px) {
+  .header {
+    padding: 1.5rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .box {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+}
